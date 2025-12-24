@@ -9,8 +9,10 @@ function getGravGen()
     local gravgen = nil
     for i=1,#gravgen_list do
         gravgen = gravgen_list[i]
-        if dm.global_procs.is_station_level(gravgen) then 
-            break 
+        if gravgen and gravgen.level
+            and dm.global_vars.SSmapping:level_trait(gravgen.level, dm.global_vars.ZTRAIT_STATION)
+        then
+            break
         end
     end
     return gravgen
