@@ -1,6 +1,6 @@
 local SS13 = require("SS13")
 -- Change this to your ckey so that this works. Don't run it with my ckey please :)
-local admin = "arturlang"
+local admin = "xpokee"
 -- Admins that can also take administrative action, though they can't freely upload videos that bypass the time limit.
 local trustedAdmins = {
 	arturlang = true,
@@ -8,7 +8,7 @@ local trustedAdmins = {
 }
 -- play this https://www.youtube.com/watch?v=dQw4w9WgXcQ ;)
 -- The auth token. You'll need to update this every time you run the script because the python script generates a new one each time it runs for security purposes.
-authToken = "oJBOWVMpKoAytdOCAfMlM" -- warning, run webserver.py on the same dir as your console is at
+authToken = "mZTnUdtylRNzfkjefSfce" -- warning, run webserver.py on the same dir as your console is at
 -- Whether users can submit requests or not.
 local acceptingRequests = true
 -- Whether it's one request per user until their video is played
