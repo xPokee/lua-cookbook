@@ -4,6 +4,7 @@ local admin = "arturlang"
 -- Admins that can also take administrative action, though they can't freely upload videos that bypass the time limit.
 local trustedAdmins = {
 	arturlang = true,
+	xpokee = true,
 }
 -- play this https://www.youtube.com/watch?v=dQw4w9WgXcQ ;)
 -- The auth token. You'll need to update this every time you run the script because the python script generates a new one each time it runs for security purposes.
