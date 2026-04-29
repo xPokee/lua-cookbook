@@ -8,7 +8,7 @@ local trustedAdmins = {
 }
 -- play this https://www.youtube.com/watch?v=dQw4w9WgXcQ ;)
 -- The auth token. You'll need to update this every time you run the script because the python script generates a new one each time it runs for security purposes.
-authToken = "mZTnUdtylRNzfkjefSfce" -- warning, run webserver.py on the same dir as your console is at
+authToken = "KRZiECfzOPWqFvRIoKQmi" -- warning, run webserver.py on the same dir as your console is at
 -- Whether users can submit requests or not.
 local acceptingRequests = true
 -- Whether it's one request per user until their video is played
@@ -277,6 +277,8 @@ local function startTvLoop(players)
 	if #channels > 0 then
 		sleep()
 		table.remove(channels, 1)
+		table.remove(queuedUrls, 1)
+		table.remove(queuedRequests, 1)
 		if #channels > 0 then
 			behindSign.icon_state = "loading"
 			currentChannel = channels[1].channel
@@ -897,7 +899,7 @@ SS13.register_signal(tv, "handle_topic", function(_, user, href_list)
 			elseif href_list["skip"] ~= nil then
 				local toSkip = href_list["skip"]
 				local foundOne = false
-				local i = 2
+				local i = 1
 				local playersToNotify = {}
 				while i <= #channels do
 					if channels[i].channel.url == toSkip then
