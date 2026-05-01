@@ -14,7 +14,7 @@ local acceptingRequests = true
 -- Whether it's one request per user until their video is played
 local onePerUser = false
 -- The size of the TV. Current available options are 1, 2, 4, 8, 16
-local scale = 8
+local scale = 4
 -- Channel to play on. Don't modify if you don't know what you're doing
 local channel = 1023
 -- Whether to auto accept requests or not
