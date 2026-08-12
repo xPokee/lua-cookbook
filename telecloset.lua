@@ -1,3 +1,4 @@
+-- Slightly broken with the new insides, but does work
 local SS13 = require("SS13")
 
 SS13.wait(1)
@@ -13,6 +14,7 @@ function sendToTarget()
         content = teleCloset.contents[i]
         content:forceMove(closet_target)
     end
+    teleCloset:open()
 end
 
 -- Fugly doubleif but this is such a lazy small script, why not
